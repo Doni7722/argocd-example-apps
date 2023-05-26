@@ -5,6 +5,9 @@ metadata:
 spec:
   replicas: 1
   revisionHistoryLimit: 3
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
   selector:
     matchLabels:
       app: guestbook-ui
