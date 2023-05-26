@@ -13,12 +13,12 @@ spec:
       labels:
         app: guestbook-ui
     spec:
-      securityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
-      fsGroup: 2000
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
         ports:
         - containerPort: 80
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 2000
